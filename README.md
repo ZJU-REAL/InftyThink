@@ -23,7 +23,7 @@
 
 <p align="center">
           <img src="docs/static/images/arxiv_logo.png" alt="arXiv" height="14"> <a href="https://arxiv.org/abs/2503.06692">Arxiv</a> 
-          | 📑 <a href="https://zju-real.github.io/inftythink/">WebPage</a> 
+          | 📑 <a href="https://zju-real.github.io/InftyThink/">WebPage</a> 
 <br>
 </p>
 
