@@ -1,4 +1,6 @@
-# <center> <img src="./docs/static/images/InfiniteThoughtLogo.png" height="50">InftyThink:  Breaking the Length Limits of Long-Context Reasoning in Large Language Models
+<div align="center">
+     <h1><img src="./docs/static/images/InfiniteThoughtLogo.png" height="50">InftyThink:  Breaking the Length Limits of Long-Context Reasoning in Large Language Models</h2>
+</div>
 
 <p align="center">
   <strong>Yuchen Yan<sup>1,2,*</sup></strong>,  
