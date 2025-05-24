@@ -28,17 +28,48 @@
 </p>
 
 ## News 🔥🔥
-- **2025.05.24:** We release our HomePage and GitHub Repo.
+- **2025.05.24:** We release our HomePage and Code examples.
 - **2025.03.09:** We release our paper.
 
 ## Overview 🦾🦾
 In this paper, we propose a fundamentally different approach to long-context reasoning. Rather than viewing reasoning as a single extended process, we introduce InftyThink, a novel paradigm that divides complex reasoning into multiple interrelated short reasoning segments. Each segment remains within a computationally efficient context length while maintaining the coherent flow of thought across iterations. This approach draws inspiration from human cognitive processes, where complex problem-solving frequently involves breaking problems into manageable parts and summarizing intermediate progress.
 
 Our contributions can be summarized as follows:  
--  We introduce \methodname, which transforms monolithic long-form reasoning into iterative reasoning with summarization, mimicking human working memory patterns and reducing the quadratic computational complexity of transformer-based models to a more manageable form.
+-  We introduce InftyThink, which transforms monolithic long-form reasoning into iterative reasoning with summarization, mimicking human working memory patterns and reducing the quadratic computational complexity of transformer-based models to a more manageable form.
 - We develop a technique to reconstruct existing long-context reasoning datasets (demonstrated on OpenR1-Math) into our iterative format, preserving reasoning quality while enabling more efficient computation without specialized architectures.
 - Across multiple model architectures, our approach achieves significant improvements while substantially reducing computational costs, challenging the assumed trade-off between reasoning depth and efficiency.
 
+## QuickStart 🎯🎯
+```plaintext
+InftyThink
+├── data_preprocess  # Generate InftyThink-style data
+├── inference        # An example for using InftyThink-style models
+├── docs
+└── readme.md
+```
+
+## Generate InftyThink-style Data
+### Step 1: Thinking process segmentation
+```sh
+cd data_preprocess
+python3 segmentation.py --dataset_name open-r1/OpenR1-Math-220k \
+    --tokenizer Qwen/Qwen2.5-Math-7B \
+    --eta 4096
+```
+
+### Step 2: Generate summary and form InftyThink-style data
+```sh
+cd data_preprocess
+python3 generate_data.py --model meta-llama/Llama-3.3-70B-Instruct
+```
+After code finished, InftyThink-style data is available.
+
+## Inference
+We provide a example for InftyThink-style reasoning, after your SFT on Infty-style data, feel free to try it!
+```sh
+cd inference
+python3 infer_single.py
+```
 
 ## Citation
 
