@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -25,16 +26,14 @@
 
 
   <title>InftyThink: Breaking the Length Limits of Long-Context Reasoning in Large Language Models</title>
-<!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -49,321 +48,347 @@
 
 
 <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://github.com/ZJU-REAL">
-      <span class="icon">
-          <i class="fab fa-github"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/ZJU-REAL">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+        </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://zju-real.github.io/SBT/">
-            Self-Braking Tuning
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
-          <a class="navbar-item" href="https://zju-real.github.io/ViewSpatial-Page/">
-            ViewSpatial-Bench
-          </a>
-          <a class="navbar-item" href="https://ZJU-REAL.github.io/CoT-Bridge">
-            CoT-Bridge
-          </a>
+          <div class="navbar-dropdown">
+            <!-- 导航项将在这里动态加载 -->
+          </div>
         </div>
-
-        
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+  
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">InftyThink: Breaking the Length Limits of Long-Context Reasoning in Large Language Models</h1>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a href="mailto:yanyuchen@zju.edu.cn" target="_blank">Yuchen Yan</a><sup>1,2,*</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="mailto:syl@zju.edu.cn" target="_blank">Yongliang Shen</a><sup>1,†</sup>,
-                </span>
-                <span class="author-block">
-                  Yang Liu<sup>2</sup>,
-                </span>
+            <h1 class="title is-1 publication-title">InftyThink: Breaking the Length Limits of Long-Context Reasoning in
+              Large Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="mailto:yanyuchen@zju.edu.cn" target="_blank">Yuchen Yan</a><sup>1,2,*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="mailto:syl@zju.edu.cn" target="_blank">Yongliang Shen</a><sup>1,†</sup>,
+              </span>
+              <span class="author-block">
+                Yang Liu<sup>2</sup>,
+              </span>
 
-                <span class="author-block">
-                  Jin Jiang<sup>2,3</sup>,
-                </span>
+              <span class="author-block">
+                Jin Jiang<sup>2,3</sup>,
+              </span>
 
-                <span class="author-block">
-                  Mengdi Zhang<sup>2</sup>,
-                </span>
-                
-                <span class="author-block">
-                  <a href="mailto:jshao@zju.edu.cn" target="_blank">Jian Shao</a><sup>1,†</sup>,
-                </span>
+              <span class="author-block">
+                Mengdi Zhang<sup>2</sup>,
+              </span>
 
-                <span class="author-block">
-                  Yueting Zhuang<sup>1</sup>
-                </span>
-              </div>
+              <span class="author-block">
+                <a href="mailto:jshao@zju.edu.cn" target="_blank">Jian Shao</a><sup>1,†</sup>,
+              </span>
 
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>Zhejiang University  </span>
-                    <span class="author-block"><sup>2</sup>Meituan Group</span>
-                    <span class="author-block"><sup>3</sup>Peking University</span>
-                    <br>
-                    <span class="author-block">Preprint. Under review.</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Work done during internship at Meituan Group.<sup>†</sup>Corresponding Author</small></span>
-                  </div>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/ZJU-REAL/InftyThink" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2503.06692" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
+              <span class="author-block">
+                Yueting Zhuang<sup>1</sup>
               </span>
             </div>
+
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Zhejiang University </span>
+              <span class="author-block"><sup>2</sup>Meituan Group</span>
+              <span class="author-block"><sup>3</sup>Peking University</span>
+              <br>
+              <span class="author-block">Preprint. Under review.</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Work done during internship at Meituan
+                  Group.<sup>†</sup>Corresponding Author</small></span>
+            </div>
+
+            <!-- Github link -->
+            <span class="link-block">
+              <a href="https://github.com/ZJU-REAL/InftyThink" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+
+            <!-- ArXiv abstract Link -->
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2503.06692" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-
-<!-- Teaser video-->
-<!--<section class="hero teaser">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="hero-body">-->
-<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
-<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
-<!--        <source src="static/videos/banner_video.mp4"-->
-<!--        type="video/mp4">-->
-<!--      </video>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
-<!--      </h2>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/videos/overview.gif" alt="Teaser Image for CoT-Bridge Project" style="width: 100%; max-height: 400px; ">
-      <h2 class="subtitle has-text-centered">
-        Illustration of <b>InftyThink</b> versus vanilla long-context reasoning. 
-      </h2>
     </div>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Advanced reasoning in large language models has achieved remarkable performance on challenging tasks, but the prevailing long-context reasoning paradigm faces critical limitations: quadratic computational scaling with sequence length, reasoning constrained by maximum context boundaries, and performance degradation beyond pre-training context windows. Existing approaches primarily compress reasoning chains without addressing the fundamental scaling problem. To overcome these challenges, we introduce InftyThink, a paradigm that transforms monolithic reasoning into an iterative process with intermediate summarization. By interleaving short reasoning segments with concise progress summaries, our approach enables unbounded reasoning depth while maintaining bounded computational costs. This creates a characteristic sawtooth memory pattern that significantly reduces computational complexity compared to traditional approaches. Furthermore, we develop a methodology for reconstructing long-context reasoning datasets into our iterative format, transforming OpenR1-Math into 333K training instances. Experiments across multiple model architectures demonstrate that our approach reduces computational costs while improving performance, with Qwen2.5-Math-7B showing 3-13% improvements across MATH500, AIME24, and GPQA_diamond benchmarks. Our work challenges the assumed trade-off between reasoning depth and computational efficiency, providing a more scalable approach to complex reasoning without architectural modifications.
-          </p>
+
+  <!-- Teaser video-->
+  <!--<section class="hero teaser">-->
+  <!--  <div class="container is-max-desktop">-->
+  <!--    <div class="hero-body">-->
+  <!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
+  <!--        &lt;!&ndash; Your video here &ndash;&gt;-->
+  <!--        <source src="static/videos/banner_video.mp4"-->
+  <!--        type="video/mp4">-->
+  <!--      </video>-->
+  <!--      <h2 class="subtitle has-text-centered">-->
+  <!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
+  <!--      </h2>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/videos/overview.gif" alt="Teaser Image for CoT-Bridge Project"
+          style="width: 100%; max-height: 400px; ">
+        <h2 class="subtitle has-text-centered">
+          Illustration of <b>InftyThink</b> versus vanilla long-context reasoning.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Advanced reasoning in large language models has achieved remarkable performance on challenging tasks, but
+              the prevailing long-context reasoning paradigm faces critical limitations: quadratic computational scaling
+              with sequence length, reasoning constrained by maximum context boundaries, and performance degradation
+              beyond pre-training context windows. Existing approaches primarily compress reasoning chains without
+              addressing the fundamental scaling problem. To overcome these challenges, we introduce InftyThink, a
+              paradigm that transforms monolithic reasoning into an iterative process with intermediate summarization.
+              By interleaving short reasoning segments with concise progress summaries, our approach enables unbounded
+              reasoning depth while maintaining bounded computational costs. This creates a characteristic sawtooth
+              memory pattern that significantly reduces computational complexity compared to traditional approaches.
+              Furthermore, we develop a methodology for reconstructing long-context reasoning datasets into our
+              iterative format, transforming OpenR1-Math into 333K training instances. Experiments across multiple model
+              architectures demonstrate that our approach reduces computational costs while improving performance, with
+              Qwen2.5-Math-7B showing 3-13% improvements across MATH500, AIME24, and GPQA_diamond benchmarks. Our work
+              challenges the assumed trade-off between reasoning depth and computational efficiency, providing a more
+              scalable approach to complex reasoning without architectural modifications.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
+  <!-- End paper abstract -->
 
 
-<section class="hero is small">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3">Method</h2>
-      <p>
-        While our InftyThink paradigm offers a theoretically compelling approach to unbounded reasoning, it requires appropriate training data to enable models to learn this iterative reasoning process. Prior work has established that models can acquire sophisticated reasoning capabilities through supervised fine-tuning on data generated by highly capable reasoners. Building on this insight, we develop a principled methodology for transforming existing long-context reasoning datasets into our iterative format.
-We select OpenR1-Math as our source dataset, which is a collection of mathematical reasoning generated by DeepSeek-R1 in response to questions from NuminaMath-1.5. This dataset spans a diverse spectrum of mathematical domains and difficulty levels, from elementary mathematics to competition-level problems, making it an ideal testbed for our approach.
-      </p>
-      <img src="static/images/data.png" alt="Systematic pipeline for reconstructing vanilla-style long-context reasoning data into the InftyThink-style format." style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
-      <p>
-        Systematic pipeline for reconstructing vanilla-style long-context reasoning data into the InftyThink-style format. <b>I.</b> Original reasoning processes are partitioned into optimally sized fragments based on parameter eta, preserving semantic coherence. <b>II.</b> Meta-Llama-3.3-Instruct generates concise yet comprehensive summaries for each reasoning fragment. <b>III.</b> The original fragments and their generated summaries are systematically recombined to create InftyThink-style training instances that teach the model to reason iteratively.
-      </p>
+  <section class="hero is small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3">Method</h2>
+        <p>
+          While our InftyThink paradigm offers a theoretically compelling approach to unbounded reasoning, it requires
+          appropriate training data to enable models to learn this iterative reasoning process. Prior work has
+          established that models can acquire sophisticated reasoning capabilities through supervised fine-tuning on
+          data generated by highly capable reasoners. Building on this insight, we develop a principled methodology for
+          transforming existing long-context reasoning datasets into our iterative format.
+          We select OpenR1-Math as our source dataset, which is a collection of mathematical reasoning generated by
+          DeepSeek-R1 in response to questions from NuminaMath-1.5. This dataset spans a diverse spectrum of
+          mathematical domains and difficulty levels, from elementary mathematics to competition-level problems, making
+          it an ideal testbed for our approach.
+        </p>
+        <img src="static/images/data.png"
+          alt="Systematic pipeline for reconstructing vanilla-style long-context reasoning data into the InftyThink-style format."
+          style="width: 100%; max-height: 600px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+        <p>
+          Systematic pipeline for reconstructing vanilla-style long-context reasoning data into the InftyThink-style
+          format. <b>I.</b> Original reasoning processes are partitioned into optimally sized fragments based on
+          parameter eta, preserving semantic coherence. <b>II.</b> Meta-Llama-3.3-Instruct generates concise yet
+          comprehensive summaries for each reasoning fragment. <b>III.</b> The original fragments and their generated
+          summaries are systematically recombined to create InftyThink-style training instances that teach the model to
+          reason iteratively.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="title is-3">Results</h2>
-      <p>
-        
-      </p>
-      <img src="static/images/main-result.png" alt="Main experimental results of CoT-Bridge" style="width: 100%; max-height: 800px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
-      <p>
-        Our main experimental results. The results are obtained by sampling the model 16 times with a temperature of 0.7. <b>Acc</b> stands for average accuracy(%), <b>Tok</b> stands for average number of generated tokens (K), and <b>TPS</b> stands for average number of tokens generated per second (K/s).
-      </p>
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3">Results</h2>
+        <p>
+
+        </p>
+        <img src="static/images/main-result.png" alt="Main experimental results of CoT-Bridge"
+          style="width: 100%; max-height: 800px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+        <p>
+          Our main experimental results. The results are obtained by sampling the model 16 times with a temperature of
+          0.7. <b>Acc</b> stands for average accuracy(%), <b>Tok</b> stands for average number of generated tokens (K),
+          and <b>TPS</b> stands for average number of tokens generated per second (K/s).
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Image carousel-->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
+  <!-- Image carousel-->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
 
-      <div id="results-carousel" class="carousel results-carousel">
+        <div id="results-carousel" class="carousel results-carousel">
 
-        
 
-        <div class="item is-flex is-flex-direction-column is-align-items-center">
-          <h2 class="title is-3">Performance across Reasoning Iteration Rounds</h2>
-          <img src="static/images/ab2.png" alt="Reinforcement Learning Training Curve" style="margin-bottom: 0.5rem; max-width: 80%;"/>
-          <h2 class="subtitle has-text-centered">
-            Model performance across iterations compared to traditional reasoning
-          </h2>
+
+          <div class="item is-flex is-flex-direction-column is-align-items-center">
+            <h2 class="title is-3">Performance across Reasoning Iteration Rounds</h2>
+            <img src="static/images/ab2.png" alt="Reinforcement Learning Training Curve"
+              style="margin-bottom: 0.5rem; max-width: 80%;" />
+            <h2 class="subtitle has-text-centered">
+              Model performance across iterations compared to traditional reasoning
+            </h2>
+          </div>
+
+
+          <div class="item is-flex is-flex-direction-column is-align-items-center">
+            <h2 class="title is-3">Influence of Context Window Size Parameter eta</h2>
+            <img src="static/images/ab3.png" alt="Reinforcement Learning Results" style="max-width: 60%;" />
+            <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+              Better cold start SFT model for RL: Reinforcement learning results.
+            </h2>
+          </div>
+
+          <div class="item is-flex is-flex-direction-column is-align-items-center">
+            <h2 class="title is-3">Endowing Short-context Models with Long-context Reasoning Ability</h2>
+            <img src="static/images/ab1.png" alt="MY ALT TEXT" style="max-width: 60%;" />
+            <h2 class="subtitle has-text-centered">
+              Comparison results of RoPE linear interpolation experiments (%).
+            </h2>
+          </div>
+
+
+
+
         </div>
+      </div>
+    </div>
+  </section>
 
-
-        <div class="item is-flex is-flex-direction-column is-align-items-center">
-          <h2 class="title is-3">Influence of Context Window Size Parameter eta</h2>
-          <img src="static/images/ab3.png" alt="Reinforcement Learning Results" style="max-width: 60%;"/>
-          <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-            Better cold start SFT model for RL: Reinforcement learning results.
-          </h2>
-        </div>
-
-        <div class="item is-flex is-flex-direction-column is-align-items-center">
-          <h2 class="title is-3">Endowing Short-context Models with Long-context Reasoning Ability</h2>
-          <img src="static/images/ab1.png" alt="MY ALT TEXT" style="max-width: 60%;"/>
-          <h2 class="subtitle has-text-centered">
-            Comparison results of RoPE linear interpolation experiments (%).
-          </h2>
-        </div>
+  <!-- End image carousel -->
 
 
 
 
-  </div>
-</div>
-</div>
-</section>
-
-<!-- End image carousel -->
-
-
-
-
-<!--&lt;!&ndash; Youtube video &ndash;&gt;-->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--      <h2 class="title is-3">Video Presentation</h2>-->
-<!--      <div class="columns is-centered has-text-centered">-->
-<!--        <div class="column is-four-fifths">-->
-<!--          -->
-<!--          <div class="publication-video">-->
-<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
-<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End youtube video &ndash;&gt;-->
+  <!--&lt;!&ndash; Youtube video &ndash;&gt;-->
+  <!--<section class="hero is-small is-light">-->
+  <!--  <div class="hero-body">-->
+  <!--    <div class="container">-->
+  <!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+  <!--      <h2 class="title is-3">Video Presentation</h2>-->
+  <!--      <div class="columns is-centered has-text-centered">-->
+  <!--        <div class="column is-four-fifths">-->
+  <!--          -->
+  <!--          <div class="publication-video">-->
+  <!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+  <!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
+  <!--&lt;!&ndash; End youtube video &ndash;&gt;-->
 
 
-<!--&lt;!&ndash; Video carousel &ndash;&gt;-->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title is-3">Another Carousel</h2>-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-video1">-->
-<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel1.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video2">-->
-<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel2.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-video3">-->
-<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
-<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
-<!--            <source src="static/videos/carousel3.mp4"-->
-<!--            type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-<!--&lt;!&ndash; End video carousel &ndash;&gt;-->
+  <!--&lt;!&ndash; Video carousel &ndash;&gt;-->
+  <!--<section class="hero is-small">-->
+  <!--  <div class="hero-body">-->
+  <!--    <div class="container">-->
+  <!--      <h2 class="title is-3">Another Carousel</h2>-->
+  <!--      <div id="results-carousel" class="carousel results-carousel">-->
+  <!--        <div class="item item-video1">-->
+  <!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
+  <!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+  <!--            <source src="static/videos/carousel1.mp4"-->
+  <!--            type="video/mp4">-->
+  <!--          </video>-->
+  <!--        </div>-->
+  <!--        <div class="item item-video2">-->
+  <!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
+  <!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+  <!--            <source src="static/videos/carousel2.mp4"-->
+  <!--            type="video/mp4">-->
+  <!--          </video>-->
+  <!--        </div>-->
+  <!--        <div class="item item-video3">-->
+  <!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
+  <!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+  <!--            <source src="static/videos/carousel3.mp4"-->
+  <!--            type="video/mp4">-->
+  <!--          </video>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</section>-->
+  <!--&lt;!&ndash; End video carousel &ndash;&gt;-->
 
 
 
 
 
 
-<!--&lt;!&ndash; Paper poster &ndash;&gt;-->
-<!--<section class="hero is-small is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <h2 class="title">Poster</h2>-->
+  <!--&lt;!&ndash; Paper poster &ndash;&gt;-->
+  <!--<section class="hero is-small is-light">-->
+  <!--  <div class="hero-body">-->
+  <!--    <div class="container">-->
+  <!--      <h2 class="title">Poster</h2>-->
 
-<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
-<!--          </iframe>-->
-<!--        -->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-<!--&lt;!&ndash;End paper poster &ndash;&gt;-->
+  <!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+  <!--          </iframe>-->
+  <!--        -->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </section>-->
+  <!--&lt;!&ndash;End paper poster &ndash;&gt;-->
 
 
-<!--BibTex citation -->
+  <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -377,33 +402,92 @@ We select OpenR1-Math as our source dataset, which is a collection of mathematic
         url={https://arxiv.org/abs/2503.06692}, 
   }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!--End BibTex citation -->
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-    <!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
+  <!-- End of Statcounter Code -->
+  <script>
+    window.HELP_IMPROVE_VIDEOJS = false;
+
+    async function loadNavItems() {
+      try {
+        const response = await fetch('https://zju-real.github.io/paper-meta-info/meta.csv');
+        const csvText = await response.text();
+
+        // 简单的CSV解析
+        const rows = csvText.split('\n')
+          .map(row => row.trim())
+          .filter(row => row) // 移除空行
+          .map(row => {
+            const [name, url] = row.split(',').map(cell => cell.trim());
+            return { name, url };
+          });
+
+        return rows;
+      } catch (error) {
+        console.error('Error loading navigation items:', error);
+        return [];
+      }
+    }
+
+    $(document).ready(async function () {
+      // 加载导航项
+      const navItems = await loadNavItems();
+      const navDropdown = $('.navbar-dropdown');
+
+      // 清空现有的导航项
+      navDropdown.empty();
+
+      // 添加新的导航项
+      navItems.forEach(item => {
+        const navItem = $('<a></a>')
+          .addClass('navbar-item')
+          .attr('href', item.url)
+          .text(item.name);
+        navDropdown.append(navItem);
+      });
+
+      // carousel初始化代码
+      var options = {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+      }
+
+      var carousels = bulmaCarousel.attach('.carousel', options);
+      bulmaSlider.attach();
+    });
+  </script>
+</body>
+
+</html>
