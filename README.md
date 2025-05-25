@@ -34,6 +34,8 @@
 - **2025.03.09:** We release our paper.
 
 ## Overview 🦾🦾
+<img src="docs/static/videos/overview.gif" width="100%"/>
+
 In this paper, we propose a fundamentally different approach to long-context reasoning. Rather than viewing reasoning as a single extended process, we introduce InftyThink, a novel paradigm that divides complex reasoning into multiple interrelated short reasoning segments. Each segment remains within a computationally efficient context length while maintaining the coherent flow of thought across iterations. This approach draws inspiration from human cognitive processes, where complex problem-solving frequently involves breaking problems into manageable parts and summarizing intermediate progress.
 
 Our contributions can be summarized as follows:  
@@ -51,6 +53,9 @@ InftyThink
 ```
 
 ## Generate InftyThink-style Data
+
+<img src="docs/static/images/data.png" width="100%" />
+
 ### Step 1: Thinking process segmentation
 ```sh
 cd data_preprocess
