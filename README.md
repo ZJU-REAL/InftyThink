@@ -72,7 +72,7 @@ python3 generate_data.py --model meta-llama/Llama-3.3-70B-Instruct
 After code finished, InftyThink-style data is available.
 
 ## Inference
-We provide a example for InftyThink-style reasoning, after your SFT on Infty-style data, feel free to try it!
+We provide an example for InftyThink-style reasoning, after your SFT on InftyThink-style data, feel free to try it!
 ```sh
 cd inference
 python3 infer_single.py
