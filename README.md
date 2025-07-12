@@ -24,12 +24,14 @@
 
 
 <p align="center">
-          <img src="docs/static/images/arxiv_logo.png" alt="arXiv" height="14"> <a href="https://arxiv.org/abs/2503.06692">Arxiv</a> 
-          | 📑 <a href="https://zju-real.github.io/InftyThink/">WebPage</a> 
+🤗 <a href="https://huggingface.co/datasets/ZJU-REAL/InftyThink">Dataset</a> |
+<img src="docs/static/images/arxiv_logo.png" alt="arXiv" height="14"> <a href="https://arxiv.org/abs/2503.06692">Arxiv</a> 
+| 📑 <a href="https://zju-real.github.io/InftyThink/">WebPage</a> 
 <br>
 </p>
 
 ## News 🔥🔥
+- **2025.07.12:** We release our re-implemented dataset.
 - **2025.05.24:** We release our HomePage and Code examples.
 - **2025.03.09:** We release our paper.
 
