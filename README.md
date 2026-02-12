@@ -5,11 +5,11 @@
 <p align="center">
   <strong>Yuchen Yan<sup>1,2,*</sup></strong>,  
   <strong>Yongliang Shen<sup>1,†</sup></strong>,  
-  Yang Liu <sup>2</sup>, 
-  Jin Jiang <sup>2,3</sup>, 
+  Yang Liu <sup>2</sup>,
+  Jin Jiang <sup>2,3</sup>,
   <br>
-  Mengdi zhang <sup>2</sup>, 
-  <strong>Jian Shao<sup>1,†</sup></strong>,  
+  Mengdi zhang <sup>2</sup>,
+  Jian Shao<sup>1</sup>,  
   Yueting Zhuang<sup>1</sup>
 </p>
 <p align="center">
@@ -17,7 +17,7 @@
   <sup>2</sup>Meituan Group
   <sup>3</sup>Peking university
   <br>
-  <em>Preprint. Under review.</em>  
+  <em>ICLR 2026</em>  
   <br>
   <sup>*</sup>Contribution during internship at Meituan Group, <sup>†</sup>Corresponding Author
 </p>
@@ -31,6 +31,7 @@
 </p>
 
 ## News 🔥🔥
+- **2026.01.26:** InftyThink has been accepted by ICLR 2026.
 - **2025.07.12:** We release our re-implemented dataset.
 - **2025.05.24:** We release our HomePage and Code examples.
 - **2025.03.09:** We release our paper.
@@ -85,17 +86,16 @@ python3 infer_single.py
 If you find our work helpful, feel free to give us a cite.
 
 ```
-@misc{yan2025inftythink,
-    title={InftyThink: Breaking the Length Limits of Long-Context Reasoning in Large Language Models}, 
+@inproceedings{
+    yan2026inftythink,
+    title={InftyThink: Breaking the Length Limits of Long-Context Reasoning in Large Language Models},
     author={Yuchen Yan and Yongliang Shen and Yang Liu and Jin Jiang and Mengdi Zhang and Jian Shao and Yueting Zhuang},
-    year={2025},
-    eprint={2503.06692},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL},
-    url={https://arxiv.org/abs/2503.06692}, 
+    booktitle={The Fourteenth International Conference on Learning Representations},
+    year={2026},
+    url={https://openreview.net/forum?id=T1h5em349L}
 }
 ```
 
 ## Contact Us
-If you have any questions, please contact us by email: 
+If you have any questions, please contact us by email or open an issue:
 yanyuchen@zju.edu.cn
