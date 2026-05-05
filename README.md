@@ -31,6 +31,7 @@
 </p>
 
 ## News 🔥🔥
+- **2026.05.01:** We trained InftyThink-style models with RL. The paper [InftyThink+](https://github.com/ZJU-REAL/InftyThink-Plus) has been accepted by ICML 2026.
 - **2026.01.26:** InftyThink has been accepted by ICLR 2026.
 - **2025.07.12:** We release our re-implemented dataset.
 - **2025.05.24:** We release our HomePage and Code examples.
